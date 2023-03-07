@@ -98,6 +98,9 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context, index) {
               final passenger = passengers[index];
               return ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(passenger.airline.first.logo),
+                ),
                 title: Text(passenger.name),
                 subtitle: Text(passenger.airline.first.country),
                 trailing: Text(passenger.airline.first.name),
